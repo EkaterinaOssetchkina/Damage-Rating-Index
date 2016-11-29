@@ -1,3 +1,5 @@
+//Thank-you to Alireza Dehghan for first proposing the idea of automating the DRI and providing a primary framework for this version of the DRI.
+
 var s_directory, s_name, s_results, s_properties, s_traverses;
 s_directory = getInfo("image.directory");
 s_name = getInfo("image.filename");
@@ -50,10 +52,7 @@ if (h != i_a_h) {
 	i_samples = i_x_steps*i_y_steps;
 	
 	showMessage("There are " +i_samples+ " frames.");
-
-	//showMessage("X steps " +i_x_steps+ "\nY steps " +i_y_steps);
 	
-
 	// iterate through the sample locations 
 	for (var y_step = 0; y_step < i_y_steps; y_step++) {
 		for (var x_step = 0; x_step < i_x_steps; x_step++) {
@@ -81,7 +80,7 @@ if (h != i_a_h) {
 			
   Dialog.create("Damage Rating Index");
 
-  Dialog.addMessage("What petrographic feature do you observe in this grid?")  // proposed by Sanchez, Fournier, and Josée Duchesne (2015)
+  Dialog.addMessage("What petrographic feature do you observe in this grid?")  // proposed by Sanchez, Fournier, and JosÃ©e Duchesne (2015)
   Dialog.addNumber("C1 (Crack in coarse aggregate):", 0);
   Dialog.addNumber("C2 (Opened crack in coarse aggregate):", 0);
   Dialog.addNumber("C3 (Filled crack in coarse aggregate):", 0);
@@ -115,13 +114,6 @@ if (h != i_a_h) {
 		close();
   }
   
-//  print("C1:"+C1);	
-//  print("C2:"+C2);	
-//  print("C3:"+C3);	
-//  print("C4:"+C4);	
-//  print("C5:"+C5);	
-//  print("C6:"+C6);	
-//  print("C7:"+C7);	
 
 counted++;
 makeLine(x,y,x,y+i_roi_edge);
