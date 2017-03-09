@@ -1,4 +1,4 @@
-//Thank-you to Alireza Dehghan for first proposing the idea of automating the DRI and providing a primary framework for this version of the DRI.
+//Thank-you to Alireza Dehghan for proposing the idea of automating the DRI and providing primary framework for the DRI macro.
 
 var s_directory, s_name, s_results, s_properties, s_traverses;
 s_directory = getInfo("image.directory");
